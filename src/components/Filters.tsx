@@ -7,6 +7,11 @@ const FiltersStyle = styled.ul`
   justify-content: center;
   gap: 20px;
   list-style: none;
+  padding: 0;
+
+  @media (max-width: 700px) {
+        flex-direction: column;
+  }
 `
 
 interface Props {

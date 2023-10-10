@@ -5,7 +5,6 @@ const Container = styled.div`
   height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: blue;
 `
 
 const Arrows = styled.div`
@@ -33,13 +32,14 @@ const ArrowRight = styled.div`
 `
 
 const Text = styled.div`
-  width: 100%;
+  width: 100px;
   height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 2em;
   color: white;
+  margin: 0 10px;
 `
 
 interface Props {
@@ -50,13 +50,11 @@ interface Props {
 const NextPage = ({ setPage, page }: Props) => {
   const handleNextPage = () => {
     setPage(page + 1)
-    console.log('+1')
   }
 
   const handlePreviousPage = () => {
     if (page !== 1) {
       setPage(page - 1)
-      console.log('-1')
     }
   }
 

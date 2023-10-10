@@ -13,19 +13,13 @@ const Container = styled.div`
   flex-direction: column;
 `
 
-const Title = styled.h1`
-  font-size: 2em;
-  margin: 0;
-  padding: 20px;
-`
-
 const Section = styled.div`
   width: 100%;
   display: flex;
   margin: 20px 0;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
 `
 
 function App () {
@@ -40,7 +34,6 @@ function App () {
 
   return (
     <Container>
-      <Title>Películas más recientes</Title>
       <Filters setFilter={setFilter}/>
       <Section>
         {movies.map((movie) => (
