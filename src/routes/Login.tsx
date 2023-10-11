@@ -15,7 +15,7 @@ const Login = () => {
       headers: {
         accept: 'application/json',
         'content-type': 'application/json',
-        Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`
+        Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`
       },
       body: JSON.stringify(sessionData)
     }

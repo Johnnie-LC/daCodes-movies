@@ -11,11 +11,11 @@ export const useMoviesByFilter = () => {
       method: 'GET',
       headers: {
         accept: 'application/json',
-        Authorization: `Bearer ${import.meta.env.VITE_TOKEN}`
+        Authorization: `Bearer ${import.meta.env.VITE_API_TOKEN}`
       }
     }
 
-    await fetch(`https://api.themoviedb.org/3/movie/${filter}?language=en-US&page=${page}`, options)
+    await fetch(`${import.meta.env.VITE_API_URL}/movie/${filter}?language=en-US&page=${page}`, options)
       .then(async response => await response.json())
       .then((data) => { setMovies(data.results) })
       .catch(err => { console.error(err) })

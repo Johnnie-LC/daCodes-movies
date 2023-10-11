@@ -11,7 +11,7 @@ export const useRequestToken = () => {
         Authorization: `Bearer ${TOKEN}`
       }
     }
-    await fetch('https://api.themoviedb.org/3/authentication/token/new', options)
+    await fetch(`${import.meta.env.VITE_API_URL}/authentication/token/new`, options)
       .then(async response => await response.json())
       .then(response => {
         if (response?.success) {
@@ -22,7 +22,7 @@ export const useRequestToken = () => {
   }
 
   useEffect(() => {
-    void fetchRequestToken(import.meta.env.VITE_TOKEN)
+    void fetchRequestToken(import.meta.env.VITE_API_TOKEN)
   }, [])
 
   return { token }
