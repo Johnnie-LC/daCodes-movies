@@ -9,6 +9,7 @@ import './index.css'
 import Login from './routes/Login.tsx'
 import App from './routes/App.tsx'
 import { Root } from './routes/Root.tsx'
+import { AuthProvider } from './components/AuthContext.tsx'
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <AuthProvider>
+       <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 )

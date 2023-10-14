@@ -21,3 +21,9 @@ export const GENRE: GENRES = {
   10752: 'War',
   37: 'Western'
 }
+
+export const LOGIN_ID = {
+  email: 'email',
+  password: 'password',
+  validated: 'validated'
+}

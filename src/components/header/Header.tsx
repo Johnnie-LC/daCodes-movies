@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import LoginIcon from '../icons/LoginIcon'
 import DaCodesIcon from '../icons/DaCodesIcon'
 import { NavBar } from './style'
@@ -7,16 +8,20 @@ const Header = () => {
     <header>
         <NavBar>
             <li>
-              <DaCodesIcon
-                width="172"
-                height="68"
-              />
+              <Link to={'/'}>
+                <DaCodesIcon
+                  width="172"
+                  height="68"
+                />
+              </Link>
             </li>
             <li>
-              <LoginIcon
-                width="52"
-                height="52"
-              />
+              <Link to={'/login'}>
+                <LoginIcon
+                  width="52"
+                  height="52"
+                />
+              </Link>
             </li>
         </NavBar>
     </header>

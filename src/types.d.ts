@@ -9,3 +9,9 @@ export interface Movie {
 }
 
 export type Filter = 'Latest' | 'now_playing' | 'popular' | 'top_rated' | 'upcoming'
+
+export interface Login {
+  email: string | null
+  password: string | null
+  validated: boolean
+}

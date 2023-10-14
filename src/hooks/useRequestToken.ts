@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react'
+import { useAuth } from '../components/AuthContext'
 
-export const useRequestToken = () => {
-  const [token, setToken] = useState(null)
+export const useRequestGuestSession = () => {
+  const { setSession } = useAuth()
+  const [isSession, setIsSession] = useState(false)
 
   const fetchRequestToken = async (TOKEN: string) => {
     const options = {
@@ -11,19 +13,21 @@ export const useRequestToken = () => {
         Authorization: `Bearer ${TOKEN}`
       }
     }
-    await fetch(`${import.meta.env.VITE_API_URL}/authentication/token/new`, options)
+    await fetch(`${import.meta.env.VITE_API_URL}/authentication/guest_session/new`, options)
       .then(async response => await response.json())
       .then(response => {
         if (response?.success) {
-          setToken(response.request_token)
+          setSession(response.guest_session_id)
         }
       })
       .catch(err => { console.error(err) })
   }
 
   useEffect(() => {
-    void fetchRequestToken(import.meta.env.VITE_API_TOKEN)
-  }, [])
+    if (isSession) {
+      void fetchRequestToken(import.meta.env.VITE_API_TOKEN)
+    }
+  }, [isSession])
 
-  return { token }
+  return { setIsSession }
 }

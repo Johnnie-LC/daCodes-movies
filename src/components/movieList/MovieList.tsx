@@ -1,4 +1,5 @@
 import { useMoviesByFilter } from '../../hooks/useMoviesByFilter'
+import { useAuth } from '../AuthContext'
 import Filters from '../filters/Filters'
 import MovieItem from '../movie/Movie'
 import NextPage from '../nextPage/NextPage'
@@ -12,11 +13,14 @@ export const MovieList = () => {
     page
   } = useMoviesByFilter()
 
+  const { token } = useAuth()
+  console.log({ token })
+
   return (
         <Container>
           <Filters setFilter={setFilter}/>
           <Section>
-            {movies.map((movie) => (
+            {token && movies.map((movie) => (
                 <MovieItem key={movie.id} movie={movie} />
             ))}
           </Section>
