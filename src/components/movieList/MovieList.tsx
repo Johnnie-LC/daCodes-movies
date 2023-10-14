@@ -14,7 +14,6 @@ export const MovieList = () => {
   } = useMoviesByFilter()
 
   const { token } = useAuth()
-  console.log({ token })
 
   return (
         <Container>
@@ -24,7 +23,7 @@ export const MovieList = () => {
                 <MovieItem key={movie.id} movie={movie} />
             ))}
           </Section>
-          <NextPage setPage={setPage} page={page} />
+          {token && <NextPage setPage={setPage} page={page} />}
         </Container>
   )
 }
