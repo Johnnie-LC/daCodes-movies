@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import ErrorPage from './routes/error-page.tsx'
 import './index.css'
-import Login from './routes/Login.tsx'
+import Login from './routes/login/Login.tsx'
 import App from './routes/App.tsx'
 import { Root } from './routes/Root.tsx'
 import { AuthProvider } from './components/AuthContext.tsx'

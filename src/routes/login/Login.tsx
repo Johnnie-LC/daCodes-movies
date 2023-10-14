@@ -1,38 +1,11 @@
 import { useEffect, useState } from 'react'
-import styled from 'styled-components'
-import { type Login } from '../types'
-import { LOGIN_ID } from '../constants'
-import { useAuth } from '../components/AuthContext'
-import { useRequestGuestSession } from '../hooks/useRequestToken'
-import { useNavigate } from 'react-router-dom'
 
-const Form = styled.form`
-  width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-`
-
-const Input = styled.input`
-  width: 100%;
-  padding: 10px;
-  border-radius: 5px;
-  outline: none;
-  border: 1px solid #ccc;
-`
-
-const Label = styled.label`
-  margin-bottom: 10px;
-`
-
-const Button = styled.button`
-  background-color: #000;
-  color: #fff;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-`
+import { type Login } from '../../types'
+import { LOGIN_ID } from '../../constants'
+import { useAuth } from '../../components/AuthContext'
+import { useRequestGuestSession } from '../../hooks/useRequestToken'
+import { Form, useNavigate } from 'react-router-dom'
+import { Button, Input, InputCheck, InputContainer, Label, LoginContainer, LoginTitle } from './style'
 
 const LoginPage = () => {
   const initialState: Login = {
@@ -83,45 +56,45 @@ const LoginPage = () => {
   }, [token])
 
   return (
-    <section>
-      <div>
+    <LoginContainer>
+      <LoginTitle>
         <h2>Login</h2>
         <span>¡Bienvenido!</span>
-      </div>
+      </LoginTitle>
       <Form onSubmit={handleSubmit}>
-        <div>
+        <InputContainer>
           <Label htmlFor="email">Correo electrónico de DaCodes</Label>
           <Input
           type="email"
           id={LOGIN_ID.email}
           value={login.email as string}
           onChange={handleLogin} />
-        </div>
+        </InputContainer>
 
-        <div>
+        <InputContainer>
           <Label htmlFor="password">Contraseña</Label>
           <Input
           type="password"
           id={LOGIN_ID.password}
           value={login.password as string}
           onChange={handleLogin} />
-        </div>
+        </InputContainer>
 
-        <div>
-          <label htmlFor="validated" >He leido y cepto todos los terminos y condiciones</label>
+        <InputCheck>
           <input
           type="checkbox"
           id={LOGIN_ID.validated}
           name="validated"
           checked={login.validated}
           onChange={handleLogin} />
-        </div>
+          <label htmlFor="validated" >He leido y cepto todos los terminos y condiciones</label>
+        </InputCheck>
 
         <Button type="submit" disabled={isDisable()}>
           Crear cuenta
         </Button>
       </Form>
-    </section>
+    </LoginContainer>
   )
 }
 
