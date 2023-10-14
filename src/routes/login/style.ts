@@ -31,8 +31,7 @@ export const InputCheck = styled.div`
     height: 20px;
     top: 0;
     left: 0;
-    background-color:#545488
-;
+    background-color:#545488;
   }
   input[type=checkbox]:checked:before {
     content: "";
@@ -61,10 +60,20 @@ export const InputCheck = styled.div`
 
   label {
     font-style: italic;
+    
+    @media (max-width: 838px) {
+        min-width: 292px;
+        width: 100%;
+    }
+  }
+
+  @media (max-width: 838px) {
+        min-width: 292px;
+        width: 100%;
   }
 `
 export const Input = styled.input`
-  width: 100%;
+  width: 550px;
   outline: none;
   background-color: rgba(81, 65, 234, 1);
   border: none;
@@ -72,15 +81,30 @@ export const Input = styled.input`
   border-radius: 50px;
   font-size: 20px;
   padding-left: 20px;
+
+  @media (max-width: 838px) {
+        min-width: 292px;
+        width: 100%;
+  }
 `
 
 export const Label = styled.label`
   margin-bottom: 10px;
   text-align: left;
   font-size: 20px;
-`
 
+  @media (max-width: 838px) {
+        min-width: 292px;
+        width: 100%;
+  }
+`
+const background = `
+linear-gradient(102.31deg, 
+                rgba(58, 227, 195, 0.61) 12.56%,
+                rgba(78, 108, 228, 0.84358) 85.09%, 
+                #563FF0 99.05%)`
 export const Button = styled.button`
+  background: ${background};
   display: flex;
   width: 256px;
   border-radius: 100px;
