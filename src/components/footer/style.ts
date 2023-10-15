@@ -24,10 +24,10 @@ export const Footer = styled.footer`
   }
 
   /** For mobile devices **/
-  @media (max-width: 767px) {
+  @media (max-width: 980px) {
       .custom-shape-divider-top-1697326568 svg {
-          width: calc(213% + 1.3px);
-          height: 288px;
+          width: calc(148%);
+          height: 150px;
       }
   }
 `
