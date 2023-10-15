@@ -1,5 +1,9 @@
+import { AWSIcon } from '../icons/AWSIcon'
+import { BestIcon } from '../icons/BestIcon'
+import { EFIIcon } from '../icons/EFIIcon'
+import { GreatPlaceIcon } from '../icons/GreatPlaceIcon'
 import { WaveSplitter } from './WaveSplitter'
-import { Footer, FooterSection } from './style'
+import { Footer, FooterSection, IconContainer } from './style'
 
 export const FooterDacode = () => {
   const DaCodesOverview = {
@@ -15,6 +19,12 @@ export const FooterDacode = () => {
         <p>
           {DaCodesOverview.overview}
         </p>
+        <IconContainer>
+          <BestIcon />
+          <GreatPlaceIcon />
+          <EFIIcon/>
+          <AWSIcon/>
+        </IconContainer>
       </FooterSection>
     </Footer>
   )

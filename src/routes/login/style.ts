@@ -99,15 +99,17 @@ export const Label = styled.label`
   }
 `
 const background = `
-linear-gradient(102.31deg, 
-                rgba(58, 227, 195, 0.61) 12.56%,
-                rgba(78, 108, 228, 0.84358) 85.09%, 
-                #563FF0 99.05%)`
+                linear-gradient(102.31deg, 
+                  rgb(58 227 195) 12.56%,
+                  rgb(105 130 228 / 84%) 85.09%, 
+                  #725efb 99.05%)
+                `
 export const Button = styled.button`
   background: ${background};
   display: flex;
   width: 256px;
   border-radius: 100px;
+  border-color: #323348;
   font-size: 30px;
   align-items: center;
   justify-content: center;

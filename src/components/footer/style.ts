@@ -34,7 +34,7 @@ export const Footer = styled.footer`
 export const FooterSection = styled.section`
   padding-top: 50px;
   margin: 0 156px;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
   h3{
     text-align: left;
     font-size: 45px;
@@ -44,4 +44,10 @@ export const FooterSection = styled.section`
     font-size: 30px;
     
   }
+`
+export const IconContainer = styled.div`
+  padding-top: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 `

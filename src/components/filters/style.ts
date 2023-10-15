@@ -35,9 +35,10 @@ export const FiltersStyle = styled.ul`
 
 const background = `
 linear-gradient(102.31deg, 
-                rgba(58, 227, 195, 0.61) 12.56%,
-                rgba(78, 108, 228, 0.84358) 85.09%, 
-                #563FF0 99.05%)`
+  rgb(58 227 195) 12.56%,
+  rgb(105 130 228 / 84%) 85.09%, 
+  #725efb 99.05%)
+`
 
 export const FilterItem = styled.li<{ $isSelected?: boolean }>`
   background: ${props => props.$isSelected ? '#563FF0' : background};
@@ -45,4 +46,9 @@ export const FilterItem = styled.li<{ $isSelected?: boolean }>`
   border-radius: 30px;
   font-size: 30px;
   font-weight: 500;
+  border: 1px solid black; 
+  &:hover{
+    cursor: pointer;
+    border-color: #646cff;
+  }
 `

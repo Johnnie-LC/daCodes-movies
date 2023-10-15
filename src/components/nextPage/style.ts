@@ -26,6 +26,12 @@ export const ArrowLeft = styled.div`
   border-radius: 50%;
   transform: rotate(0deg);
   font-size: 2.5rem;
+  border: 1px solid rgba(81, 65, 234, 1);
+  
+  &:hover{
+    background-color: #1618ff;
+    border-color: #1618ff;
+  }
 `
 
 export const ArrowRight = styled.div`
@@ -38,6 +44,12 @@ export const ArrowRight = styled.div`
   border-radius: 50%;
   transform: rotate(180deg);
   font-size: 2.5rem;
+  border: 1px solid rgba(81, 65, 234, 1);
+
+  &:hover{
+    background-color: #1618ff;
+    border-color: #1618ff;
+  }
 `
 
 export const Text = styled.div`
