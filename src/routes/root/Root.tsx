@@ -14,9 +14,11 @@ export const Root = () => {
   return (
   <>
     <Header />
+
     <Container>
       <Outlet />
     </Container>
+
     <FooterDacode />
   </>
   )

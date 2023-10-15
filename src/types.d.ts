@@ -8,10 +8,16 @@ export interface Movie {
 
 }
 
-export type Filter = 'Latest' | 'now_playing' | 'popular' | 'top_rated' | 'upcoming'
-
 export interface Login {
   email: string | null
   password: string | null
   validated: boolean
+}
+
+export type Filter = 'Latest' | 'now_playing' | 'popular' | 'top_rated' | 'upcoming'
+
+export interface FilterType {
+  name: string
+  id: number
+  click: () => void
 }

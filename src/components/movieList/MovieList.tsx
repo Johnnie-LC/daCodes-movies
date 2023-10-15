@@ -18,11 +18,13 @@ export const MovieList = () => {
   return (
         <Container>
           <Filters setFilter={setFilter}/>
+
           <Section>
             {token && movies.map((movie) => (
                 <MovieItem key={movie.id} movie={movie} />
             ))}
           </Section>
+
           {token && <NextPage setPage={setPage} page={page} />}
         </Container>
   )

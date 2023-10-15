@@ -20,15 +20,19 @@ const NextPage = ({ setPage, page }: Props) => {
   return (
     <Container>
       <Arrows>
+
         <ArrowLeft onClick={handlePreviousPage}>
           <MdArrowBackIosNew />
         </ArrowLeft>
+
         <Text>
           <span>{page}/{page + 1}</span>
         </Text>
+
         <ArrowRight onClick={handleNextPage}>
           <MdArrowBackIosNew />
         </ArrowRight>
+
       </Arrows>
     </Container>
   )

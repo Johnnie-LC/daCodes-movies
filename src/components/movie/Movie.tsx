@@ -11,17 +11,18 @@ const MovieItem = ({ movie }: Props) => {
     <List>
         <Item>
             <Image src={'https://image.tmdb.org/t/p/w500' + movie.poster_path } alt={movie.title}/>
+
             <InfoContainer>
               <div>
                 <h3>{movie.title}</h3>
                 <span>{getMainGenres(movie)}</span>
               </div>
+
                <p>{movie.overview}</p>
+
               <span>
               {
-                createRating({
-                  rating: movie.vote_average
-                })
+                createRating({ rating: movie.vote_average })
               }
               </span>
             </InfoContainer>

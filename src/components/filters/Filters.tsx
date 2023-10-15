@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { type Filter } from '../../types'
+import { type FilterType, type Filter } from '../../types'
 import { FilterItem, FilterSelected, FiltersContainer, FiltersStyle } from './style'
 
 interface Props {
@@ -7,7 +7,7 @@ interface Props {
 }
 
 const Filters: React.FC<Props> = ({ setFilter }) => {
-  const filters = [
+  const filters: FilterType[] = [
     {
       name: 'Latest',
       id: 1,
@@ -36,7 +36,7 @@ const Filters: React.FC<Props> = ({ setFilter }) => {
   ]
   const [selectedFilter, setSelectedFilter] = useState<string | null>('Latest')
 
-  const generateFilterItem = (filter: { name: string, id: number, click: () => void }) => {
+  const generateFilterItem = (filter: FilterType) => {
     const handleFilter = () => {
       filter.click()
       setSelectedFilter(filter.name)
