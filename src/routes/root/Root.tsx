@@ -1,12 +1,9 @@
 import { useEffect } from 'react'
-import Header from '../components/header/Header'
+import Header from '../../components/header/Header'
 import { Outlet, useNavigate } from 'react-router-dom'
-import styled from 'styled-components'
+import { Container } from './style'
+import { FooterDacode } from '../../components/footer/Footer'
 
-const Container = styled.section`
-  max-width: 1280px;
-  margin: 0 auto;
-`
 export const Root = () => {
   const navigate = useNavigate()
 
@@ -20,6 +17,7 @@ export const Root = () => {
     <Container>
       <Outlet />
     </Container>
+    <FooterDacode />
   </>
   )
 }

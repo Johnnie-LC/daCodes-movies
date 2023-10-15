@@ -61,6 +61,7 @@ const LoginPage = () => {
         <span>¡Bienvenido!</span>
       </LoginTitle>
       <Form onSubmit={handleSubmit}>
+
         <InputContainer>
           <Label htmlFor="email">Correo electrónico de DaCodes</Label>
           <Input
