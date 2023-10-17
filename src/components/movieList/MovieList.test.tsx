@@ -3,8 +3,6 @@ import { cleanup, render, screen } from '@testing-library/react'
 import { MovieList } from './MovieList' // Import your MovieList component
 import { useAuth } from '../AuthContext' // Import your AuthProvider component
 import { useMoviesByFilter } from '../../hooks/useMoviesByFilter'
-import { type SetStateAction } from 'react'
-import { type Movie } from '../../types'
 
 // Mock the useMoviesByFilter hook
 vi.mock('../../hooks/useMoviesByFilter', () => ({
