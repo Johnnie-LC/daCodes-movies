@@ -16,10 +16,10 @@ export const MovieList = () => {
   const { token } = useAuth()
 
   return (
-        <Container>
+        <Container >
           <Filters setFilter={setFilter}/>
 
-          <Section>
+          <Section data-testid={'movie-list-container'}>
             {token && movies.map((movie) => (
                 <MovieItem key={movie.id} movie={movie} />
             ))}

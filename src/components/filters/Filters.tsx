@@ -47,6 +47,7 @@ const Filters: React.FC<Props> = ({ setFilter }) => {
       key={filter.id}
       onClick={handleFilter}
       $isSelected={selectedFilter === filter.name}
+      data-testid={'filter-item'}
       >
         {filter.name}
       </FilterItem>
@@ -58,7 +59,7 @@ const Filters: React.FC<Props> = ({ setFilter }) => {
   return (
     <FiltersContainer>
       <FiltersStyle>{filterItems}</FiltersStyle>
-      <FilterSelected>{selectedFilter}</FilterSelected>
+      <FilterSelected data-testid='selected-filter'>{selectedFilter}</FilterSelected>
     </FiltersContainer>
   )
 }

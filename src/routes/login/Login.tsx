@@ -87,7 +87,7 @@ const LoginPage = () => {
           name="validated"
           checked={login.validated}
           onChange={handleLogin} />
-          <label htmlFor="validated" >He leido y cepto todos los terminos y condiciones</label>
+          <label htmlFor="validated">He leido y acepto todos los terminos y condiciones</label>
         </InputCheck>
 
         <Button type="submit" disabled={isDisable()}>

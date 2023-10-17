@@ -8,7 +8,7 @@ const Header = () => {
     <header>
         <NavBar>
             <li>
-              <Link to={'/'}>
+              <Link to={'/'} data-testid='DaCodes-Home-id'>
                 <DaCodesIcon
                   width="172"
                   height="68"
@@ -16,7 +16,7 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <Link to={'/login'}>
+              <Link to={'/login'} data-testid='login-id'>
                 <LoginIcon
                   width="52"
                   height="52"
